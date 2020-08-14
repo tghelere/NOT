@@ -1,3 +1,5 @@
-function fish_greeting
-  # Customize fish greeting message
+function fish_greeting -d "what's up, fish?"
+    if math "$LINES >= 20 && $COLUMNS >= 80" >/dev/null
+        bash (dirname (status -f))/welcome.sh
+    end
 end
